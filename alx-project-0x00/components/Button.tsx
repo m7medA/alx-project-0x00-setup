@@ -3,6 +3,7 @@ import { ButtonProps } from "@/interfaces";
 
 const Button: React.FC<ButtonProps> = ({
   title,
+  styles = "bg-blue-500 text-white",
   size = "medium",
   shape = "rounded-md",
 }) => {
@@ -12,7 +13,7 @@ const Button: React.FC<ButtonProps> = ({
     large: "px-6 py-3 text-lg",
   };
   return (
-    <button className={`bg-blue-500 text-white ${sizeClasses[size]} ${shape}`}>
+    <button className={`${styles} ${sizeClasses[size]} ${shape}`}>
       {title}
     </button>
   );
